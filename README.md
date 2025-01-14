@@ -1,5 +1,12 @@
 # PipesApp
 
+## versiones necesarias
+
+Node v20.17.0
+npm v11.0.0
+Angular v16.2.16
+PrimeNg v15.0.1
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
 
 ## Development server
