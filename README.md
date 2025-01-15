@@ -9,9 +9,10 @@ PrimeNg v15.0.1 `npm install primeng@15.0.1 primeicons@latest --force`
 PrimeFlex v3.3.1 `npm install primeflex --legacy-peer-deps`
 
 
-## Development server
+## para iniciar el proyecto
 
-Run `ng serve` -> `http://localhost:4200/`
+`npm install`
+`ng serve` -> `http://localhost:4200/`
 
 
 ## Build
