@@ -2,6 +2,9 @@ h1{
     margin-left: 1rem !important;
     font-size: 3rem;
 }
+.d-flex{
+    display: flex;
+}
 
 .code{
     background-color: var(--blue-500);
@@ -13,7 +16,10 @@ h1{
 .code-green{
     background-color: var(--green-500);
     text-align: center;
-    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
-    margin-bottom: 0;
+    padding: 1rem;
+    margin: 0.5rem;
 }

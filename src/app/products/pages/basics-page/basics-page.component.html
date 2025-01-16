@@ -6,15 +6,17 @@
 <div class="grid">
   <div class="col-12 md:col-4">
     <p-card header="Uppercase" class="text-center">
-      <p class="text-center mt-0">se debe agregar la variable en el ts 
-        <br>public nameLower: string = 'hola';</p>
+      <p class="text-center mt-0">se debe agregar la variable en el ts
+        <br>public nameLower: string = 'hola';
+      </p>
       <p class="code">{{nameLower}} === {{ nameLower | uppercase }}</p>
     </p-card>
   </div>
   <div class="col-12 md:col-4">
     <p-card header="Lowercase" class="text-center">
-      <p class="text-center mt-0">se debe agregar la variable en el ts 
-        <br>public nameUpper: string = 'MUNDO';</p>
+      <p class="text-center mt-0">se debe agregar la variable en el ts
+        <br>public nameUpper: string = 'MUNDO';
+      </p>
       <p class="code">
         {{nameUpper}} === {{ nameUpper | lowercase }}
       </p>
@@ -22,38 +24,66 @@
   </div>
   <div class="col-12 md:col-4">
     <p-card header="Titlecase" class="text-center">
-      <p class="text-center mt-0">se debe agregar la variable en el ts 
-        <br>public fullName: string = 'hOlA munDo';</p>
+      <p class="text-center mt-0">se debe agregar la variable en el ts
+        <br>public fullName: string = 'hOlA munDo';
+      </p>
       <p class="code">
         {{fullName}} === {{ fullName | titlecase }}
       </p>
     </p-card>
   </div>
 
-  <div class="col-8 col-offset-2">
+  <div class="col-12">
     <p-card header="Custom date">
       <p class="my-0">se debe crear una variable public customDate: Date = new Date();</p>
       <div class="grid">
-        <div class="col-4">
-          <ol>
+        <div class="col-6">
+          <div class="d-flex">
             <p class="my-5">customDate</p>
-            <p class="my-5 pt-1"> customDate | date </p>
-            <p class="my-5 pt-1"> fecha | date:'short' </p>
-            <p class="my-5 pt-1"> fecha | date:'long' </p>
-            <p class="my-5 pt-1"> fecha | date:'MMMM' </p>
-            <p class="my-5 pt-1"> fecha | date:'MMMM dd, yyyy' </p>
-          </ol>
-        </div>
-        <div class="col">
-          <ol class="mb-0 ps-0">
             <p class="code-green">{{customDate}}</p>
-            <p class="code-green"> fecha | date:'long':'GMT-6' </p>
-            <p class="code-green"> fecha | date:'long':'GMT-4' </p>
-            <p class="code-green"> fecha | date:'long':'':'es-HN' </p>
-            <p class="code-green"> fecha | date:'long':'':'en-US' </p>
-            <p class="code-green"> fecha | date:'long':'':'fr-CA' </p>
-          </ol>
-
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date</p>
+            <p class="code-green">{{customDate | date}}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'short'</p>
+            <p class="code-green">{{customDate | date:'short'}}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'long'</p>
+            <p class="code-green">{{customDate | date:'long'}}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'MMMM'</p>
+            <p class="code-green">{{customDate | date:'MMMM'}}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'MMMM dd, yyyy'</p>
+            <p class="code-green">{{customDate | date:'MMMM dd, yyyy'}}</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'long':'GMT-6' </p>
+            <p class="code-green">{{customDate | date:'long':'GMT-6' }}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'long':'GMT-4' </p>
+            <p class="code-green">{{customDate | date:'long':'GMT-4' }}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'long':'':'es-CL' </p>
+            <p class="code-green">{{customDate | date:'long':'':'es-CL' }}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'long':'':'en-NZ' </p>
+            <p class="code-green">{{customDate | date:'long':'':'en-NZ' }}</p>
+          </div>
+          <div class="d-flex">
+            <p class="my-5">customDate | date:'long':'':'ar-DZ' </p>
+            <p class="code-green">{{customDate | date:'long':'':'ar-DZ' }}</p>
+          </div>
         </div>
       </div>
     </p-card>
