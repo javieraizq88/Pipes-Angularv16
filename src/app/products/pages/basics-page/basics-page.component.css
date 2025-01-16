@@ -2,3 +2,18 @@ h1{
     margin-left: 1rem !important;
     font-size: 3rem;
 }
+
+.code{
+    background-color: var(--blue-500);
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.code-green{
+    background-color: var(--green-500);
+    text-align: center;
+    padding: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}

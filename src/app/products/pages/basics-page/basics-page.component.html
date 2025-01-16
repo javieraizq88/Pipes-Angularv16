@@ -1,44 +1,61 @@
-<h1 header="Pipes básicos" >
+<h1 header="Pipes básicos">
   <h1>Pipes básicos</h1>
 </h1>
 
 
 <div class="grid">
-
   <div class="col-12 md:col-4">
     <p-card header="Uppercase" class="text-center">
-     {{nameLower}} === {{ nameLower | uppercase }}
+      <p class="text-center mt-0">se debe agregar la variable en el ts 
+        <br>public nameLower: string = 'hola';</p>
+      <p class="code">{{nameLower}} === {{ nameLower | uppercase }}</p>
     </p-card>
   </div>
   <div class="col-12 md:col-4">
     <p-card header="Lowercase" class="text-center">
-     {{nameUpper}} === {{ nameUpper | lowercase }}
+      <p class="text-center mt-0">se debe agregar la variable en el ts 
+        <br>public nameUpper: string = 'MUNDO';</p>
+      <p class="code">
+        {{nameUpper}} === {{ nameUpper | lowercase }}
+      </p>
     </p-card>
   </div>
   <div class="col-12 md:col-4">
     <p-card header="Titlecase" class="text-center">
-     {{fullName}} === {{ fullName | titlecase }}
+      <p class="text-center mt-0">se debe agregar la variable en el ts 
+        <br>public fullName: string = 'hOlA munDo';</p>
+      <p class="code">
+        {{fullName}} === {{ fullName | titlecase }}
+      </p>
     </p-card>
   </div>
 
-  <div class="col-12 md:col-6">
-    <p-card header="Titlecase">
-      <ol>
-        <li> fecha </li>
-        <li> fecha | date </li>
-        <li> fecha | date:'short' </li>
-        <li> fecha | date:'long' </li>
-        <li> fecha | date:'MMMM' </li>
-        <li> fecha | date:'MMMM dd, yyyy' </li>
-      </ol>
-      <hr>
-      <ol class="mb-0">
-        <li> fecha | date:'long':'GMT-6' </li>
-        <li> fecha | date:'long':'GMT-4' </li>
-        <li> fecha | date:'long':'':'es-HN' </li>
-        <li> fecha | date:'long':'':'en-US' </li>
-        <li> fecha | date:'long':'':'fr-CA' </li>
-      </ol>
+  <div class="col-8 col-offset-2">
+    <p-card header="Custom date">
+      <p class="my-0">se debe crear una variable public customDate: Date = new Date();</p>
+      <div class="grid">
+        <div class="col-4">
+          <ol>
+            <p class="my-5">customDate</p>
+            <p class="my-5 pt-1"> customDate | date </p>
+            <p class="my-5 pt-1"> fecha | date:'short' </p>
+            <p class="my-5 pt-1"> fecha | date:'long' </p>
+            <p class="my-5 pt-1"> fecha | date:'MMMM' </p>
+            <p class="my-5 pt-1"> fecha | date:'MMMM dd, yyyy' </p>
+          </ol>
+        </div>
+        <div class="col">
+          <ol class="mb-0 ps-0">
+            <p class="code-green">{{customDate}}</p>
+            <p class="code-green"> fecha | date:'long':'GMT-6' </p>
+            <p class="code-green"> fecha | date:'long':'GMT-4' </p>
+            <p class="code-green"> fecha | date:'long':'':'es-HN' </p>
+            <p class="code-green"> fecha | date:'long':'':'en-US' </p>
+            <p class="code-green"> fecha | date:'long':'':'fr-CA' </p>
+          </ol>
+
+        </div>
+      </div>
     </p-card>
   </div>
 

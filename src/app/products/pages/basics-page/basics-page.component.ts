@@ -13,4 +13,5 @@ export class BasicsPageComponent {
 
   public customDate: Date = new Date();
 
+  
 }
