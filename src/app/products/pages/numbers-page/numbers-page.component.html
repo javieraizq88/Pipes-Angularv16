@@ -1,27 +1,78 @@
-<p-panel header="Pipes numéricos" class="p-1">
-  <p>
-    Pipes incluídos en Angular - Usualmente en el Common Module
-  </p>
-</p-panel>
-
+<h1 header="Pipes numéricos">
+  <h1>Pipes numéricos</h1>
+</h1>
 
 <div class="grid">
 
   <div class="col-12 md:col-4">
-    <p-card header="Ventas Netas" subheader="del presente año">
-      {{ (totalSells + 1235 ) | number:'1.2-2' }}
+    <p-card header="Decimal">
+      <p class="text-center pt-2 mt-4">
+        en ts -> public totalSells: number = 2567789.5567;
+        <br>
+        en html -> (totalSells + 1235 ) | number:'1.2-2'
+        <br>
+        number:'1.2-2' -> suma 1 y muestra 2 decimales
+      </p>
+      <p class="code">
+        {{ (totalSells + 1235 ) | number:'1.2-2' }}
+      </p>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="currency" subheader="Símbolo moneda por defecto">
+      <p class="text-center mt-1">
+        en ts -> public totalSells: number = 2567789.5567;
+        <br>
+        en html -> totalSells | currency
+        <br>
+      <b>currency</b> Agrega USD antes del numero
+      </p>
+      <p class="code">
+        {{ totalSells | currency }}
+      </p>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Cambiar palabra de la moneda">
+      <p class="text-center pt-2 mt-4">
+        en ts -> public totalSells: number = 2567789.5567;
+        <br>
+        en html -> totalSells | currency:'CLP '
+        <br>
+        se le puede agregar la palabra que necesites
+      </p>
+      <p class="code">
+        {{ totalSells | currency:'CLP ' }}
+      </p>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Symbol-narrow" subheader="Cambiar símbolo de la moneda">
+      <p class="text-center mt-0">
+        en ts -> public totalSells: number = 2567789.5567;
+        <br>
+        en html -> totalSells | currency:'':'symbol-narrow'
+        <br>
+        se puede eliminar la palabra o letras antes del numero y agregar el simbolo con <b>symbol-narrow</b>
+      </p>
+      <p class="code">
+        {{ totalSells | currency:'':'symbol-narrow' }}
+      </p>
     </p-card>
   </div>
 
   <div class="col-12 md:col-4">
-    <p-card header="Ventas Brutas" subheader="del presente año">
-      {{ totalSells | currency:'HNL':'symbol-narrow':'1.4-4' }}
-    </p-card>
-  </div>
-
-  <div class="col-12 md:col-4">
-    <p-card header="Ganancia porcentual" subheader="del presente año">
-      {{ percent | percent: '1.2-2' }}
+    <p-card header="Percent">
+      <p class="text-center mt-5 pt-3">
+        en ts -> public percent: number = 0.4856;
+        <br>
+        en html -> percent | percent: '1.2-2'
+        <br>
+        percent -> crea el porcentaje del numero
+      </p>
+      <p class="code">
+        {{ percent | percent: '1.2-2' }}
+      </p>
     </p-card>
   </div>
 
