@@ -9,7 +9,7 @@ import { interval, Observable, tap } from 'rxjs';
 export class UncommonPageComponent {
 
   // i18n Select
-  public name: string = 'Fernando';
+  public name: string = 'Juan';
   public gender: 'male'|'female' = 'male';
   public invitationMap = {
     male: 'invitarlo',
@@ -17,7 +17,7 @@ export class UncommonPageComponent {
   }
 
   changeClient():void {
-    this.name = 'Melissa';
+    this.name = 'María';
     this.gender = 'female';
   }
 
@@ -31,8 +31,11 @@ export class UncommonPageComponent {
   }
 
   deleteClient(): void {
-    this.clients.shift();
+    this.clients.shift(); // shift -> elimina el primer elemento de la lista
   }
+
+  // Slice Pipe
+  public numeros: string[] = ['Cero','Uno','Dos', 'Tres', 'Cuatro', 'Cinco', 'Seis'];
 
   // KeyValue Pipe
   public person = {
