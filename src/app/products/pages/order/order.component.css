@@ -1,0 +1,17 @@
+h1{
+    margin-left: 1rem !important;
+    font-size: 3rem;
+}
+.d-flex{
+    display: flex;
+}
+.ai-c{
+    align-items: center;
+}
+.code{
+    background-color: var(--red-500);
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
